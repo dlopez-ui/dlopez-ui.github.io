@@ -1,36 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="ca">
 <head>
   <meta charset="UTF-8">
-  <title>Comparació nectarine ecològic i convencional</title>
-  
-  <!-- Importar la font Comfortaa de Google Fonts -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparem nap ecològic i convencional</title>
+
+  <!-- Bootstrap i Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+
+  <!-- Font Comfortaa -->
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    /* Comfortaa com a font predeterminada per a tota la pàgina */
+    /* Comfortaa com a font predeterminada */
     body {
       font-family: 'Comfortaa', sans-serif;
-      text-align: justify; /* Justificar tot el text */
+      transition: background-color 0.3s, color 0.3s;
+      padding: 20px;
+    }
+
+    /* Botó mode clar/fosc discreto a la cantonada superior dreta */
+    #themeToggle {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      border: none;
+      background: transparent;
+      font-size: 1.5rem;
+      color: inherit;
+      z-index: 9999;
+      cursor: pointer;
+    }
+
+    /* Mode fosc */
+    body[data-bs-theme="dark"] {
+      background-color: #121212;
+      color: #f1f1f1;
+    }
+
+    body[data-bs-theme="dark"] a {
+      color: #bb86fc;
+    }
+
+    body[data-bs-theme="dark"] ul li {
+      color: #f1f1f1;
+    }
+
+    /* Ajuste imágenes en modo oscuro si se desea */
+    body[data-bs-theme="dark"] img {
+      filter: brightness(0.9);
     }
   </style>
 </head>
-<body>
+<body data-bs-theme="light">
 
-  <h1><u>Comparem nectarines ecològiques i convencionals: quina té més nutrients segons la ciència i segons la IA?</u></h1>
+  <!-- Botó mode clar/fosc -->
+  <button id="themeToggle"><i class="fa-solid fa-moon"></i></button>
+
+  <h1>Comparem nap ecològic i convencional: quin té més nutrients segons la ciència i segons la IA?</h1>
 
   <p>He trobat diferents articles científics que estudien el meu tema i els trobareu a continuació en format APA7. APA7 és una forma d'escriure un article científic.</p>
 
   <ul>
-    <li>Carbonaro Marina, Mattera Maria, Nicoli Stefano, Bergamo Paolo y Cappelloni Marsilio</li>
-    <li>Modulation of Antioxidant Compounds in Organic vs Conventional Fruit (Peach, Prunus persica L., and Pear, Pyrus communis L.) 5p.</li>
+    <li>JR Xavier, V Mythri, R Nagaraj, VCP Ramakrishna, PE Patki, AD Semwal (2020-07-25). Organic Versus Conventional – a Comparative Study on Quality and Nutritive Value of Selected Vegetable Crops of Southern India. SAARC Journal of Agriculture. Vol.18. 18 pàg.</li>
+    <li>Harendra Kumar, Ankur Agarwal i Om Prakash. Quality and nutritional value of vegetables from organic and conventional farming.</li>
     <li>Sempre posem primer els autors pel cognom i les inicials del nom, després l'any entre parèntesis, el títol, després el nom de la revista abreujat, el volum i les pàgines que té.</li>
   </ul>
 
-  <img src="Captura.png" alt="Figura 4">
+  <img src="captura1.png" alt="Figura 4">
 
   <p>En la figura 4 podrà veure que no hi ha diferències estadísticament entre el nivell de Vitamina C d’un nap cultivat convencionalment o un cultiu ecològic. Observem que els resultats són molt variables entre 1,5 g de Vitamines.</p>
-  
-  <p>Aqui la resposta a la pregunta de Chat GPT</p>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Mode clar/fosc amb canvi d'icona
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = themeToggle.querySelector('i');
+
+    themeToggle.addEventListener('click', () => {
+      if (document.body.getAttribute('data-bs-theme') === 'dark') {
+        document.body.setAttribute('data-bs-theme', 'light');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+      } else {
+        document.body.setAttribute('data-bs-theme', 'dark');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+      }
+    });
+  </script>
+
 </body>
 </html>
