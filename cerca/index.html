@@ -54,6 +54,24 @@
       margin: 30px 0;
       border-radius: 2px;
     }
+
+    /* Línia verda centrada amb animació */
+    .green-line {
+      background: green;
+      height: 3px;
+      border: none;
+      border-radius: 2px;
+      width: 100%;
+      margin: 20px auto;
+      transition: width 0.5s;
+    }
+    .green-line:hover {
+      width: 80%;
+    }
+    .green-text {
+      text-align: center;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body data-bs-theme="light">
@@ -61,7 +79,7 @@
   <!-- Botó mode clar/fosc -->
   <button id="themeToggle"><i class="fa-solid fa-moon"></i></button>
 
-  <h1><u>Comparem pastenagues ecològiques i convencionals: quina té més nutrients segons la ciència i segons la IA?</u></h1>
+  <h1><u>Comparem pastanagues ecològiques i convencionals: quina té més nutrients segons la ciència i segons la IA?</u></h1>
 
   <p>He trobat diferents articles científics que estudien el meu tema i els trobareu a continuació en format APA7. APA7 és una forma d'escriure un article científic.</p>
 
@@ -91,9 +109,9 @@
 
   <p>En la figura 4 podrà veure que no hi ha diferències estadísticament entre el nivell de Vitamina C d’un nap cultivat convencionalment o un cultiu ecològic. Observem que els resultats són molt variables entre 1,5 g de Vitamines.</p>
 
-  <b><hr></b>
-
-  <p>Aqui la resposta a la pregunta de Chat GPT</p>
+  <!-- Línia verda centrada amb text i animació -->
+  <hr class="green-line">
+  <h2 class="green-text"><strong>Aquí la resposta a la pregunta de Chat GPT</strong></h2>
 
   <!-- Font Awesome per les icones -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
