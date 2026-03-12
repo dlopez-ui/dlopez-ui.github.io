@@ -173,8 +173,21 @@
       <img src="" alt="Figura 0">
     <hr>
     <h1 align="center">Calendar plot, Time variation and trendLevel</h1>
-    <p></p>
-      <hr>
+    <p>1. Loading files
+The code first defines a folder where the CSV files are stored. Then it uses a function to search for all files that match a specific pattern (for example, files that start with “meteo”). After that, the files are read using read.csv() to load the data into R.
+
+2. Combining the data
+With lapply(), all the files are read and stored in a list. Then do.call(rbind, ...) combines all the data into a single table by placing the rows of each file one under another.
+
+3. Converting dates
+The function as.POSIXct() converts the date column into a time format that R can recognize. This allows the program to sort dates correctly and perform calculations by day, week, or year.
+
+4. Manipulating data
+Using the tidyverse library, functions such as mutate() create new columns, arrange() sorts the rows, and group_by() together with summarise() groups the data and calculates totals or averages.
+
+5. Saving the results
+Finally, write_csv() saves the final results in a new CSV file so the processed data can be used later for analysis or in other programs.</p>
+
     <hr>
   </main>
 
