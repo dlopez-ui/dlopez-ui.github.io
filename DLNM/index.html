@@ -182,6 +182,63 @@
     }
   </style>
 </head>
+  <body data-bs-theme="light">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light shadow sticky-top">
+    <div class="container-fluid">
+      <!-- 5. Logo i text -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="https://dlopez-ui.github.io/logo.png" alt="Logo" class="logo rounded-circle me-2">
+        <span class="fw-bold">Web de Diego</span>
+      </a>
+
+      <!-- Botó menú mòbil -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menú -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!-- Projecte 1 -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="proj1Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-diagram-project me-1"></i> Cerca IA vs Google academic
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="proj1Dropdown">
+              <li><a class="dropdown-item" href="https://dlopez-ui.github.io/cerca"><i class="fa-solid fa-seedling"></i> Recerca pastanagues</a></li>
+            </ul>
+          </li>
+          <!-- Projecte 2 -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="proj2Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-anchor"></i> Projecte 22 dies en 22 peus
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="proj2Dropdown">
+              <li><a class="dropdown-item" href="https://dlopez-ui.github.io/introduccio"><i class="fa-solid fa-book"></i> Introducció </a></li>
+              <li><a class="dropdown-item" href="https://dlopez-ui.github.io/vectors"><i class="fa-solid fa-compass"></i> Calculem distàncies amb vectors </a></li>
+              <li><a class="dropdown-item" href="https://dlopez-ui.github.io/distancies"><i class="fa-solid fa-location-arrow"></i> Calculem distàncies amb GPS </a></li>
+            </ul>
+          </li>
+          
+           <!-- Projecte 3 -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="proj2Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-anchor"></i> Contaminació i salut al baix llobregat
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="proj2Dropdown">
+              <li><a class="dropdown-item" href="https://dlopez-ui.github.io/contaminacio"><i class="fa-solid fa-lungs-virus"></i> Contaminació i salud respiratòria a El Prat de Llobregat</a></li>
+              <li><a class="dropdown-item" href="https://dlopez-ui.github.io/epi"><i class="<i class="fa-solid fa-head-side-mask"></i>Environmental Epidemiological Analysis </a></li>
+              <li><a class="dropdown-item" href="https://dlopez-ui.github.io/dlnm"><i class="fa-solid fa-industry"></i> Modelos No Lineales de Retardo Distribuido (DLNM) </a></li>
+              <li><a class="dropdown-item" href="https://dlopez-ui.github.io/epidemiologia"><i class="fa-solid fa-smog"></i> Resultats de El Prat de Llobregat </a></li>
+            </ul>
+          </li>  
+        </ul>
+        <!-- Botó mode clar/fosc -->
+        <button id="themeToggle" class="ms-2"><i class="fa-solid fa-moon"></i></button>
+      </div>
+    </div>
+  </nav>
 <body>
   <header class="hero text-center">
     <div class="container">
@@ -207,17 +264,16 @@
         <label class="form-label fw-semibold">Exemples (City1 / City2)</label>
         <select id="demoDataset" class="form-select form-select-lg">
           <option value="">-- Puja un arxiu propi --</option>
-
-                                <option value="https://dlopez-ui.github.io/epi/Elprat(sagnier).csv">🏙️ Elprat</option>
-                                <option value="https://dlopez-ui.github.io/epi/Gava.csv">🏙️ Gava</option>
-                                <option value="https://dlopez-ui.github.io/epi/Hospitalet.csv">🏙️ Hospitalet</option>
-                                <option value="https://dlopez-ui.github.io/epi/Jardinsdelapau.csv">🏙️ Jardins de la pau</option>
-                                <option value="https://dlopez-ui.github.io/epi/Martorell.csv">🏙️ Martorell</option>
-                                <option value="https://dlopez-ui.github.io/epi/Palleja.csv">🏙️ Palleja</option>
-                                <option value="https://dlopez-ui.github.io/epi/Santandreu.csv">🏙️ Santandreu</option>
-                                <option value="https://dlopez-ui.github.io/epi/Sanvicenç.csv">🏙️ Sanvicenç</option>
-                                <option value="https://dlopez-ui.github.io/epi/Villadecans.csv">🏙️ Villadecans</option>
+          <option value="Martorell.csv">🏢 Martorell</option>
           
+                                <option value="https://dlopez-ui.github.io/epi/PALLEJA.csv">🏢 Palleja </option>
+                                <option value="https://dlopez-ui.github.io/epi/elprat.csv">🏢 El Prat </option>
+                                <option value="https://dlopez-ui.github.io/epi/gava.csv">🏢 Gava </option>
+                                <option value="https://dlopez-ui.github.io/epi/hospitalet.csv">🏢 Hospitalet </option>
+                                <option value="https://dlopez-ui.github.io/epi/sagnier.csv">🏢 Sagnier </option>
+                                <option value="https://dlopez-ui.github.io/epi/santandreu.csv">🏢 Santandreu </option>
+                                <option value="https://dlopez-ui.github.io/epi/sanvicenç.csv">🏢 Sanvicenç </option>
+                                <option value="https://dlopez-ui.github.io/epi/viladecans.csv">🏢 Viladecans </option>
         </select>
       </div>
       <div class="col-md-5">
@@ -918,37 +974,4 @@ els.demoDataset.addEventListener('change', async (e) => {
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
