@@ -200,7 +200,10 @@
             <div class="city-highlight">🏭 Martorell · dades dels servidors XPVCA, Meteocat i SIVIC</div>
         </div>
         <p style="margin-top: 20px; font-size: 1.1rem; background: #e6f0ea; padding: 12px 24px; border-radius: 50px;">
-            <strong>Problema clàssic:</strong> A partir del conjunt de dades diàries de qualitat de l'aire (NO₂, NOX, PM10, PM2.5, O₃, SO₂) i incidència d'infeccions respiratòries (per 1000 habitants) registrades a Martorell entre 2012 i 2025, es demana avaluar l'associació entre la contaminació i la salut respiratòria, calcular indicadors de risc i interpretar els pics detectats.
+            <strong>Problema clàssic:</strong>Problema clàssic:</strong> A partir del conjunt de dades diàries de qualitat
+        de l'aire (NO₂, NOX, PM10, PM2.5, O₃, SO₂) i incidència d'infeccions respiratòries (per 1000 habitants) registrades
+        a Martorell entre 2012 i 2025, es demana avaluar l'associació entre la contaminació i la salut respiratòria, calcular
+        indicadors de risc i interpretar els pics detectats.
         </p>
     </div>
 
@@ -227,7 +230,8 @@
             <strong>📌 Preguntes del problema (a resoldre):</strong>
             <ol style="margin-top: 12px; padding-left: 28px;">
                 <li>Calcula el coeficient de correlació de Pearson entre NO₂ i incidència a lag 0 i interpreta'l.</li>
-                <li>Estima el Risc Relatiu (RR), el Risc Atribuïble (AR) i la Fracció Atribuïble (AR%) comparant dies amb NO₂ > 25 µg/m³ vs ≤ 25 µg/m³.</li>
+                <li>Estima el Risc Relatiu (RR), el Risc Atribuïble (AR) i la Fracció Atribuïble (AR%) 
+                    comparant dies amb NO₂ > 25 µg/m³ vs ≤ 25 µg/m³.</li>
                 <li>Explica què indiquen els valors de correlació per a diferents retards (lag 0 a lag 3).</li>
                 <li>Interpreta els pics detectats (gener 2022) i proposa una mesura de salut pública.</li>
             </ol>
@@ -263,17 +267,20 @@
             </ul>
             <div class="formula-block">
                 \[
-                RR = \frac{I_{\text{exposats}}}{I_{\text{no exposats}}} = \frac{1.60}{1.38} \approx 1.159
+                RR = \frac{I_{\text{exposats}}}{I_{\text{no exposats}}} = \frac{2.33}{2.08} \approx 1.120
                 \]
                 \[
-                AR = I_{\text{exposats}} - I_{\text{no exposats}} = 1.60 - 1.38 = 0.22 \text{ casos/1000}
+                AR = I_{\text{exposats}} - I_{\text{no exposats}} = 2.33 - 2.08 = 0.25 \text{ casos/1000}
                 \]
                 \[
-                AR\% = \frac{AR}{I_{\text{exposats}}} \times 100 = \frac{0.22}{1.60} \times 100 \approx 13.75\%
+                AR\% = \frac{AR}{I_{\text{exposats}}} \times 100 = \frac{0.25}{2.33} \times 100 \approx 10.73\%
                 \]
             </div>
-            <p>Interval de confiança del 95% per al RR: \([1.14,\,1.17]\), \(p<0.001\).</p>
-            <p><strong>Conclusió:</strong> RR > 1 indica un efecte nociu. El 13.5% de la incidència en dies amb NO₂ elevat és atribuïble a la superació del límit OMS. Això equival a un excés de 0.22 casos per cada 1000 habitants i dia.</p>
+   <p>Interval de confiança del 95% per al RR: \([1.14,\,1.17]\), \(p<0.001\).</p>
+            <p><strong>Conclusió:</strong> RR > 1 indica un efecte nociu. El 10.73% 
+                de la incidència en dies amb NO₂ elevat és atribuïble a la superació 
+                del límit OMS. Això equival a un excés de 0.22 casos per cada 1000 
+                habitants i dia.</p>
         </div>
 
         <!-- PAS 3 -->
@@ -313,7 +320,7 @@
                 \text{Excés diari} = (\text{incidència pic} - \text{incidència basal}) \times \frac{\text{població}}{1000}
                 \]
             </div>
-            <p>Per a Martorell (~28.000 habitants), un pic de 5.27 suposa unes \( (5.27-1.38)\times 28 \approx 109 \) consultes extra aquell dia. Aquests pics reforcen la necessitat d'alertes per contaminació.</p>
+            <p>Per a Martorell (~28.000 habitants), un pic de 5.27 suposa unes \( (5.27-2.08)\times 28 \approx 109 \) consultes extra aquell dia. Aquests pics reforcen la necessitat d'alertes per contaminació.</p>
         </div>
 
         <!-- PAS 5 -->
