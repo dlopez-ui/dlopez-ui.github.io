@@ -1,1 +1,27 @@
 
+#include <stdio.h>
+#include <windows.h>
+
+int main() {
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
+
+    double V = 25;
+    double W = 736;
+    double N = 1000;
+    double CV;
+
+
+    printf("\n");
+    printf("Exercici a3)\n\n");
+
+    printf("Quina és la potència en CV que ha de desenvolupar un motor d'un cotxe\n");
+    printf("per mantenir una velocitat de 90 km/h si hem d'aplicar una força de 1000 N?\n\n");
+    
+    /* a) Potencia del motor d'un cotxe */
+    CV = V * N / W;
+       printf("a) Potencia Cavalls: %.2f CVsv\n", CV);
+
+    return 0;
+}
+
