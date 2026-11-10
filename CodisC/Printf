@@ -4,10 +4,13 @@
   utilitzant HTML5, que és el llenguatge per crear
   pàgines web.
 -->
+
 <html lang="ca">
 <!-- Indiquem que el contingut de la pàgina és en català. -->
+
 <head>
   <!-- Aquí posem informació sobre la pàgina web. -->
+
   <meta charset="UTF-8">
   <!-- Permet mostrar correctament accents, apòstrofs i símbols. -->
 
